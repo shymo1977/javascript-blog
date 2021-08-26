@@ -30,6 +30,7 @@ function titleClickHandler(event){
   /* find the correct article using the selector (value of 'href' attribute) */
   const targetArticle = clickedElement.querySelector('href');
   /* add class 'active' to the correct article */
+  targetArticle.classList.add('active');
 }
 
 const links = document.querySelectorAll('.titles a');
