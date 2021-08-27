@@ -28,7 +28,7 @@
     const targetArticle = document.querySelector(articleSelector);
     
   /* add class 'active' to the correct article */
-  console.log(targetArticle);
+ 
   targetArticle.classList.add('active');
 }
 
@@ -38,5 +38,41 @@
     link.addEventListener('click', titleClickHandler);
 }
  
+const optArticleSelector = '.post',
+  optTitleSelector = '.post-title',
+  optTitleListSelector = '.titles';
+
+function generateTitleLinks(){
+
+  /* remove contents of titleList */
+  function titleClickHandler(){
+    const titleList = document.querySelectorAll(optTitleListSelector);
+    
+
+  }
+  function clearMessages(){
+	document.getElementById('messages').innerHTML = 'titleList';
+  console.log(clearMessages);
+}
+
+  /* for each article */
+  const articles = document.querySelectorAll('.post');
+
+  for(let article of articles){
+    article.classList.remove('active');
+  }
+
+    /* get the article id */
+const articleId = article.getAttribute('id');
+    /* find the title element */
+
+    /* get the title from the title element */
+
+    /* create HTML of the link */
+
+    /* insert link into titleList */
+
+}
+
 
 
