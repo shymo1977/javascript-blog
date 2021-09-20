@@ -77,7 +77,7 @@ function generateTitleLinks(){
    
 
   /* create HTML of the link */
-  
+
   const linkHTMLData = {id: articleId, title: articleTitle};
   const linkHTML = templates.articleLink(linkHTMLData);
   /* insert link into titleList */
@@ -269,7 +269,7 @@ let html = '';
 
   /* [NEW] add html from allTags to tagList */
 
-  //tagList.innerHTML = allTags.join(' '); 
+  tagList.innerHTML = templates.tagCloudLink(allTagsData);
   const tagsParams = calculateTagsParams(allTags);
   console.log('tagsParams:', tagsParams)
   let allTagsHTML ='';
@@ -293,3 +293,12 @@ let html = '';
         
         
     }
+
+    const allTagsData = {tags: []};
+    allTagsData.tags.push({
+      tag: tag,
+      count: allTags[tag],
+      className: calculateTagClass(allTags[tag], tagsParams)
+    });
+
+
